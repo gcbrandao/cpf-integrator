@@ -25,8 +25,7 @@ public abstract class IntegratorApplication extends SpringBootServletInitializer
 
     @Bean
     public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
-        return new MappingJackson2HttpMessageConverter(
-                new com.bnpparibas.cardif.framework.client.rest.converter.CustomObjectMapper());
+        return new MappingJackson2HttpMessageConverter();
     }
 
     @Bean

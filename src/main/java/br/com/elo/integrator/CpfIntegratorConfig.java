@@ -1,6 +1,6 @@
 package br.com.elo.integrator;
 
-import com.bnpparibas.cardif.contractservice.dto.job.policyclose.PolicyDTO;
+import br.com.elo.integrator.dto.CpfIntegratorDTO;
 import br.com.elo.integrator.dto.ResultDTO;
 import br.com.elo.integrator.step.CpfIntegratorEnd;
 import br.com.elo.integrator.step.CpfIntegratorValidate;
@@ -30,8 +30,8 @@ public class CpfIntegratorConfig {
     private int chunckSize;
 
     @Bean
-    Step policyCloseForAgeStep(final ItemReader<PolicyDTO> reader,
-                                          final ItemProcessor<PolicyDTO, ResultDTO> processor,
+    Step policyCloseForAgeStep(final ItemReader<CpfIntegratorDTO> reader,
+                                          final ItemProcessor<CpfIntegratorDTO, ResultDTO> processor,
                                           final ItemWriter<ResultDTO> writer,
                                           final TaskExecutor taskExecutor,
                                           final StepBuilderFactory stepBuilderFactory) {
